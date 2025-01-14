@@ -36,6 +36,7 @@ public class SavingsAccount extends Account {
         if (numWithdraw > 4) {
             monthCommission += 1000 * (numWithdraw - 4);
         }
+        this.balance -= monthCommission;
         checkActive();
     }
 
