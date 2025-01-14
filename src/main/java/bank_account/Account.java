@@ -38,10 +38,9 @@ public class Account {
 
     public void printAccount() {
         System.out.println("Balance: " + balance);
-        System.out.println("Monthly Commission: " + monthCommission);
-        System.out.println("Number of Transactions: " + (numDeposit + numWithdraw));
-        System.out.println(" * deposits: " + numDeposit);
-        System.out.println(" * withdraws: " + numWithdraw);
-        System.out.println("Annual Interest: " + annualInterest);
+        System.out.println("Deposits number: " + numDeposit);
+        System.out.println("Withdraws number: " + numWithdraw);
+        System.out.println("Annual interest: " + annualInterest);
+        System.out.println("Monthly commission: " + monthCommission);
     }
 }
