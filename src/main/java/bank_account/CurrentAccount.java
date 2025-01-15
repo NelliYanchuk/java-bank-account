@@ -1,11 +1,16 @@
 package bank_account;
 
-public class CheckingAccount extends Account {
+public class CurrentAccount extends Account {
     private float overdraft;
 
-    public CheckingAccount(float balance, float annualInterestRate) {
+    public CurrentAccount(float balance, float annualInterestRate) {
         super(balance, annualInterestRate);
         overdraft = 0;
+    }
+
+    // Getter for overdraft
+    public float getOverdraft() {
+        return overdraft;
     }
 
     @Override
@@ -13,8 +18,8 @@ public class CheckingAccount extends Account {
         if (amount <= balance) {
             super.withdraw(amount);
         } else {
-            balance = 0;
             overdraft += (amount - balance);
+            balance = 0;
         }
     }
 
@@ -25,7 +30,7 @@ public class CheckingAccount extends Account {
                 amount -= overdraft;
                 overdraft = 0;
             } else {
-                overdraft -= amount;
+                overdraft = overdraft - amount;
                 amount = 0;
             }
         }
