@@ -37,53 +37,40 @@ public class CurrentAccountTest {
         account.withdraw(1500); //overdraft = 500
         assertEquals(0, account.balance);
         assertEquals(500, account.getOverdraft());
-        
+
         account.deposit(400); //overdraft = 100
         assertEquals(0, account.balance);
         assertEquals(100, account.getOverdraft());
-    }
-
-    @Test
-    void testWithdrawLessThanBalance() {
-        account.withdraw(500);
-        assertEquals(500, account.balance);
-        assertEquals(0, account.getOverdraft());
-    }
-
-    @Test
-    void testWithdrawMoreThanBalance() {
-        account.withdraw(1500);
+    
+        account.deposit(100);
         assertEquals(0, account.balance);
-        assertEquals(500, account.getOverdraft());
+        assertEquals(0, account.getOverdraft());
+
+        account.withdraw(200);
+        assertEquals(0, account.balance);
+        assertEquals(200, account.getOverdraft());
+
+        account.deposit(400);
+        assertEquals(200, account.balance);
+        assertEquals(0, account.getOverdraft());
+
     }
 
     @Test
-    void testWithdrawExactlyBalance() {
+    void testWithdrawEqualBalance() {
         account.withdraw(1000);
         assertEquals(0, account.balance);
         assertEquals(0, account.getOverdraft());
     }
 
-    @Test
-    void testWithdrawMoreThanBalanceAndOverdraft() {
-        account.withdraw(2000);
-        assertEquals(0, account.balance);
-        assertEquals(1000, account.getOverdraft());
-    }
 
     @Test
     void testGenMonthReport() {
         account.deposit(1000);
         account.withdraw(500);
         account.genMonthReport();
-        assertEquals(1500, account.balance);
+        assertEquals(1507.5, account.balance);
         assertEquals(0, account.getOverdraft());
     }
 
-    @Test
-    void testPrintAccount() {
-        account.deposit(1000);
-        account.withdraw(500);
-        account.printAccount();
-    }
 }

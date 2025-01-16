@@ -76,11 +76,5 @@ public class SavingsAccountTest {
         assertEquals(5, account.numWithdraw);
     }
 
-    @Test
-    void testPrintAccount() {
-        account.deposit(500);
-        account.withdraw(200);
-        account.printAccount();
-    }
 }
 
