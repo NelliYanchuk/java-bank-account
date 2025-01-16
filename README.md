@@ -24,16 +24,16 @@ The `Account` class has two subclasses:
 ## Instructions
 
 ### UML Diagram
-The UML diagram for the classes `Account`, `SavingsAccount`, and `CurrentAccount` can be viewed [here](/screenshorts/diagram.png).
+The UML diagram for the classes `Account`, `SavingsAccount`, and `CurrentAccount` can be viewed [here](/screenshots/diagram.png).
 
-<img src="screenshorts/diagram.png" alt="Class Diagram" width="40%">
+<img src="screenshots/diagram.png" alt="Class Diagram" width="40%">
 
 ### Testing
 Unit tests have been implemented to ensure the correct functionality of the bank account logic, including deposits, withdrawals, monthly statements, and handling of overdrafts and active/inactive statuses.
 
-The test covering for the classes `Account`, `SavingsAccount`, and `CurrentAccount` can be viewed [here](/screenshorts/test_cover.png).
+The test covering for the classes `Account`, `SavingsAccount`, and `CurrentAccount` can be viewed [here](/screenshots/test_cover.png).
 
-<img src="screenshorts/test_cover.png" alt="Test Coverage" width="25%">
+<img src="screenshots/test_cover.png" alt="Test Coverage" width="25%">
 
 
 ### How to Run
