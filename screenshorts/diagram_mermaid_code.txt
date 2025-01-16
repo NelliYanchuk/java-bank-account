@@ -1,0 +1,34 @@
+classDiagram
+    class Account {
+        -float balance
+        -float annualInterestRate
+        -float monthCommission
+        -int numDeposit
+        -int numWithdraw
+        +deposit(amount: float): void
+        +withdraw(amount: float): void
+        +calcMonthInterest(): void
+        +genMonthReport(): void
+        +printAccount(): void
+    }
+
+    class CurrentAccount {
+        -float overdraft
+        +deposit(amount: float): void
+        +withdraw(amount: float): void
+        +genMonthReport(): void
+        +printAccount(): void
+        +getOverdraft(): float
+    }
+
+    class SavingsAccount {
+        -boolean isActive
+        +deposit(amount: float): void
+        +withdraw(amount: float): void
+        +genMonthReport(): void
+        +printAccount(): void
+        -checkActive(): void
+    }
+
+    Account <|-- CurrentAccount
+    Account <|-- SavingsAccount
