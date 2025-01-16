@@ -1,4 +1,4 @@
-# Bank Account - F5 Giacomo Classroom
+# Bank Account
 
 ## Description
 This project models a bank account in Java. The `Account` class has attributes for balance, number of deposits, number of withdrawals, annual interest rate, and monthly commission. The class includes methods to deposit and withdraw money, calculate monthly interest, generate a monthly statement, and print the values of the attributes.
